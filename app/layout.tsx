@@ -32,51 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <header className="flex shadow-2xl items-center justify-between p-3 backdrop-blur-md bg-white/10">
-        <Image src={image1} alt="" />
-        <div className="flex items-center">
-          <Link href={"/"}>
-            <p className="font-bold hover:text-amber-600">Главная</p>
-          </Link>
-          <p className="font-bold hover:text-amber-600">Страховка</p>
-          <Link href={"/faq"}>
-            <p className="font-bold hover:text-amber-600">FAQ</p>
-          </Link>
-          <Link href={"/delivery"}>
-            <p className="font-bold hover:text-amber-600">Доставка</p>
-          </Link>
-          <p className="font-bold hover:text-amber-600">Контакты</p>
-        </div>
-        <p className="font-bold text-2xl">Оставить заявку</p>
-      </header>
       <body className="min-h-full flex flex-col">{children}</body>
-      <footer className="bg-[#1E1E1E] py-15 w-full mt-0 text-white">
-        <div className="flex items-center justify-between w-[85%] m-auto">
-          <div className="">
-            <div className="flex mb-15 items-center gap-5">
-              <p className="font-bold">Главная</p>
-              <p className="font-bold">Страховка</p>
-              <p className="font-bold">FAQ</p>
-              <p className="font-bold">О нас</p>
-              <p className="font-bold">Контакты</p>
-            </div>
-            <div className="flex items-center gap-5">
-              <p className="font-bold text-gray-500">© 2021 Cleopartner</p>
-              <div className="flex items-center">
-                <Image src={telegramicon} alt="" />
-                <Image src={instagramicon} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <Image className="mb-10 ml-28" src={image1} alt="" />
-            <div className="flex items-center gap-4">
-              <p className="font-bold text-gray-500">Политика конфиденциальности</p>
-              <p className="font-bold text-gray-500">Договора</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </html>
   );
 }

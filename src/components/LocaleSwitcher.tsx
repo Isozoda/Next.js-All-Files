@@ -1,4 +1,5 @@
 "use client";
+
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
@@ -26,13 +27,12 @@ export default function LocaleSwitcher() {
   const handleLocaleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     localStorage.setItem("app_locale", newLocale);
-    
-    // Replace the current locale in the URL path
+
     const parts = pathname.split('/');
     if (['en', 'ru', 'tj'].includes(parts[1])) {
-        parts[1] = newLocale;
+      parts[1] = newLocale;
     } else {
-        parts.splice(1, 0, newLocale);
+      parts.splice(1, 0, newLocale);
     }
     const newPath = parts.join('/') || '/';
     router.push(newPath);

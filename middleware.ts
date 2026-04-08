@@ -1,12 +1,8 @@
-import createMiddleware from 'next-intl/middleware';
-import {routing} from './src/i18n/routing';
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./src/i18n/routing";
 
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: [
-    '/',
-    '/(en|ru|tj)/:path*',
-    '/((?!_next|_vercel|.*\\..*).*)'
-  ]
+  matcher: ["/", "/(en|ru|tj)/:path*"],
 };

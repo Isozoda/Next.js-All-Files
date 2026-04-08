@@ -1,26 +1,28 @@
-import "./globals.css";
 import Image from "next/image";
-import image2 from "./images/2 айфонс 1.png"
-import image3 from "./images/Rectangle 65 (1).png"
-import image4 from "./images/Rectangle 38.png"
-import image5 from "./images/Group 16.png"
-import image6 from "./images/audi-uber 1.png"
-import image7 from "./images/Ellipse 314.png"
-import image8 from "./images/image 280.png"
-import image9 from "./images/image 279.png"
-import image10 from "./images/image 251.png"
-import image11 from "./images/Group 79.png"
+import image2 from "../images/2 айфонс 1.png"
+import image3 from "../images/Rectangle 65 (1).png"
+import image4 from "../images/Rectangle 38.png"
+import image5 from "../images/Group 16.png"
+import image6 from "../images/audi-uber 1.png"
+import image7 from "../images/Ellipse 314.png"
+import image8 from "../images/image 280.png"
+import image9 from "../images/image 279.png"
+import image10 from "../images/image 251.png"
+import image11 from "../images/Group 79.png"
+import "../globals.css";
+import { useTranslations } from 'next-intl';
 
 const Page = () => {
+  const t = useTranslations('home');
+
   return (
     <div className="w-full">
       <div className="background">
-        <h1 className="text-5xl mb-7">Подключайтесь к такси в Польше <br />
-          с ежедневным стабильным заработком!</h1>
-        <p className="text-xl mb-10">Ежедневные выплаты стали реальными вместе с Cleo Partner</p>
+        <h1 className="text-5xl mb-7" dangerouslySetInnerHTML={{ __html: t.raw("hero_title") }}></h1>
+        <p className="text-xl mb-10">{t("hero_subtitle")}</p>
         <div className="flex items-center gap-5 justify-center">
-          <button className="bg-white text-black px-5 py-2 font-bold">Оставить заявку</button>
-          <button className="px-5 py-2 border">Узнать больше</button>
+          <button className="bg-white text-black px-5 py-2 font-bold">{t("btn_apply")}</button>
+          <button className="px-5 py-2 border">{t("btn_more")}</button>
         </div>
       </div>
       <div className="flex py-10 px-20 pr-50 m-auto bg-gray-800 text-white items-center justify-between">
@@ -28,21 +30,20 @@ const Page = () => {
           <Image src={image2} alt="" />
         </div>
         <div>
-          <h1 className="text-5xl font-bold">О нашей компании</h1>
-          <p className="text-xl mt-5">Компания Cleo Partners <br /> предлагает Вам комплексное <br /> сотрудничество на платформах <br /> Uber, Bolt, Free Now, Uber Eats, <br /> Bolt Food.</p>
-          <p className="mt-5">С нами уже работают более 2000 довольных водителей <br /> по всей Польше, которые ежедневно зарабатывают.</p>
+          <h1 className="text-5xl font-bold">{t("about_title")}</h1>
+          <p className="text-xl mt-5" dangerouslySetInnerHTML={{ __html: t.raw("about_p1") }}></p>
+          <p className="mt-5" dangerouslySetInnerHTML={{ __html: t.raw("about_p2") }}></p>
         </div>
       </div>
       <div className="flex py-15 px-20 pr-50 m-auto bg-gray-800 text-white items-center justify-between">
         <div>
-          <h1 className="text-3xl mb-10 font-bold">Работая с нами Вы сохраняете <br /> все преимущества водителя <br /> такси</h1>
-          <p className="mb-5">Вы имеете возможность самостоятельно устанавливать <br /> рабочий график и получать заработанные деньги <br /> ежедневно.</p>
-          <p className="mb-5">Всего 4 документа разделяют вас от обычного <br /> человека и работника нашей компании. </p>
-          <p className="mb-10">Работать можно на собственном или арендованном <br /> автомобиле из нашего автопарка, либо из автопарка  <br />
-            за пределами компании.</p>
+          <h1 className="text-3xl mb-10 font-bold" dangerouslySetInnerHTML={{ __html: t.raw("work_title") }}></h1>
+          <p className="mb-5" dangerouslySetInnerHTML={{ __html: t.raw("work_p1") }}></p>
+          <p className="mb-5" dangerouslySetInnerHTML={{ __html: t.raw("work_p2") }}></p>
+          <p className="mb-10" dangerouslySetInnerHTML={{ __html: t.raw("work_p3") }}></p>
           <div className="flex items-center gap-5">
-            <button className="py-3 rounded-xl px-10 bg-[#FFFFFF33] text-white font-bold">Консультация</button>
-            <button className="font-bold border py-2.5 rounded-xl px-10">Узнать больше</button>
+            <button className="py-3 rounded-xl px-10 bg-[#FFFFFF33] text-white font-bold">{t("btn_consult")}</button>
+            <button className="font-bold border py-2.5 rounded-xl px-10">{t("btn_more")}</button>
           </div>
         </div>
         <div>
@@ -50,7 +51,7 @@ const Page = () => {
         </div>
       </div>
       <div className="background2 text-black pb-50">
-        <h1 className="text-4xl mb-12 pt-10 font-bold text-black">Наши преимущества</h1>
+        <h1 className="text-4xl mb-12 pt-10 font-bold text-black">{t("adv_title")}</h1>
         <div className="max-w-5xl mx-auto px-8 py-15 mb-20 rounded-4xl grid backdrop-blur-md bg-gray-900 grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-8">
           <div className="flex flex-col items-center text-center">
             <div
@@ -64,8 +65,8 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">Автоматическая</span> <b className="font-bold text-white">выплата</b><br />
-              зарплаты <b className="font-bold text-white">каждые 24 часа</b>
+              <span className="text-white">{t("adv_1_1")}</span> <b className="font-bold text-white">{t("adv_1_2")}</b><br />
+              {t("adv_1_3")} <b className="font-bold text-white">{t("adv_1_4")}</b>
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -79,8 +80,8 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">Рекомендованный</span> <b className="font-bold text-white">партнер</b><br />
-              <span className="text-[#e2e8f0]">Uber, Bolt, Free Now</span>
+              <span className="text-white">{t("adv_2_1")}</span> <b className="font-bold text-white">{t("adv_2_2")}</b><br />
+              <span className="text-[#e2e8f0]">{t("adv_2_3")}</span>
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -95,8 +96,8 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">Техническая</span> <b className="font-bold text-white">поддержка</b><br />
-              <b className="font-bold text-white">24/7</b> <span className="text-[#e2e8f0]">в онлайн-режиме</span>
+              <span className="text-white">{t("adv_3_1")}</span> <b className="font-bold text-white">{t("adv_3_2")}</b><br />
+              <b className="font-bold text-white">{t("adv_3_3")}</b> <span className="text-[#e2e8f0]">{t("adv_3_4")}</span>
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -113,8 +114,8 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">Мы оплачиваем штрафы по</span><br />
-              <b className="font-bold text-white">безналичным поездкам</b>
+              <span className="text-white">{t("adv_4_1")}</span><br />
+              <b className="font-bold text-white">{t("adv_4_2")}</b>
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -130,8 +131,8 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">До 2-ух рабочих дней</span><br />
-              <span className="text-[#e2e8f0]">подключения на</span> <b className="font-bold text-white">флот водителя</b>
+              <span className="text-white">{t("adv_5_1")}</span><br />
+              <span className="text-[#e2e8f0]">{t("adv_5_2")}</span> <b className="font-bold text-white">{t("adv_5_3")}</b>
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -144,47 +145,43 @@ const Page = () => {
               </svg>
             </div>
             <p className="text-[#e2e8f0] text-[17px] leading-relaxed font-medium">
-              <span className="text-white">Являемся</span> <b className="font-bold text-white">единственным</b><br />
-              <b className="font-bold text-white">гарантом</b> <span className="text-[#e2e8f0]">выплат на рынке</span>
+              <span className="text-white">{t("adv_6_1")}</span> <b className="font-bold text-white">{t("adv_6_2")}</b><br />
+              <b className="font-bold text-white">{t("adv_6_3")}</b> <span className="text-[#e2e8f0]">{t("adv_6_4")}</span>
             </p>
           </div>
         </div>
       </div>
       <div className="background3">
-        <h1 className="text-5xl mb-12 pt-12 font-bold text-black">Отзывы от наших водителей</h1>
+        <h1 className="text-5xl mb-12 pt-12 font-bold text-black">{t("reviews_title")}</h1>
         <div className="flex items-center justify-between w-[65%] m-auto rounded-4xl bg-gray-900 text-white p-18">
           <div className="">
             <Image className="mb-10" src={image4} alt="" />
             <Image className="ml-20" src={image5} alt="" />
           </div>
           <div className="w-[50%] text-start">
-            <p className="font-bold mb-5">Несколько месяцев назад, я стал водителем компании Cleo Partners. Ребята очень молодые и упорные. Сначала я отнесся с недоверием, так как стоимость аренды, как мне казалось, была несколько высокой. </p>
-            <p className="font-bold mb-5">Но, через месяц я понял, что все имеет свою цену. Результаты, которые дали в короткий срок, 2 месяца, меня удивили. Все четко, прозрачно, развернутые отчеты и контроль бизнес-процессов. В плане организации, если и возникали какие-то вопросы,  то все решали в течении считанных минут или часов.</p>
-            <h1 className="font-bold text-3xl mb-2">Юрий Филионов</h1>
-            <p className="text-gray-600 font-bold text-lg">Водитель в сети Uber</p>
+            <p className="font-bold mb-5">{t("review_p1")}</p>
+            <p className="font-bold mb-5">{t("review_p2")}</p>
+            <h1 className="font-bold text-3xl mb-2">{t("review_name")}</h1>
+            <p className="text-gray-600 font-bold text-lg">{t("review_role")}</p>
           </div>
         </div>
       </div>
       <div className="background4">
-        <h1 className="text-5xl mb-15 pt-12 font-bold text-black">Требования к автомобилю</h1>
+        <h1 className="text-5xl mb-15 pt-12 font-bold text-black">{t("req_title")}</h1>
         <div className="flex items-center gap-100 justify-between w-[80%] m-auto">
           <Image className="w-160" src={image6} alt="" />
           <div className="">
             <div className="flex mb-5 items-center gap-3">
               <Image className="" src={image7} alt="" />
-              <p className="text-start font-bold text-xl">Авто должно быть 4-х дверное, <br /> леворульное.</p>
+              <p className="text-start font-bold text-xl" dangerouslySetInnerHTML={{ __html: t.raw("req_1") }}></p>
             </div>
             <div className="flex mb-5 items-center gap-3">
               <Image className="" src={image7} alt="" />
-              <p className="text-start font-bold text-xl">Для работы в сервисе Bolt нужно: <br />
-                — Авто от 2001 года
-              </p>
+              <p className="text-start font-bold text-xl" dangerouslySetInnerHTML={{ __html: t.raw("req_2") }}></p>
             </div>
             <div className="flex mb-5 items-center gap-3">
               <Image className="" src={image7} alt="" />
-              <p className="text-start font-bold text-xl">Для работы в сервисе Uber, Free Now нужно: <br />
-                — Авто от 2006 года
-              </p>
+              <p className="text-start font-bold text-xl" dangerouslySetInnerHTML={{ __html: t.raw("req_3") }}></p>
             </div>
             <div className="flex justify-center items-center gap-4">
               <Image src={image8} alt="" />
@@ -196,18 +193,18 @@ const Page = () => {
       <div className="background5">
         <div className="flex mb-18 items-center justify-between w-[80%] m-auto">
           <div className="text-start">
-            <h1 className="mb-3 font-bold pt-10 text-4xl">Присоединяйся к нашей <br /> службе такси и начинай <br /> зарабатывать прямо сейчас! </h1>
-            <p className="font-bold text-gray-500">Оставляй заявку для сотрудничества с Cleo Partners</p>
+            <h1 className="mb-3 font-bold pt-10 text-4xl" dangerouslySetInnerHTML={{ __html: t.raw("join_title") }}></h1>
+            <p className="font-bold text-gray-500">{t("join_sub")}</p>
           </div>
           <div className="w-[30%] pt-5">
             <form className="flex flex-col">
-              <input className="font-bold text-white px-7 bg-[#00000033] py-3 w-full" type="text" placeholder="Ваше имя" />
-              <input className="font-bold text-white px-7 bg-[#00000033] py-3 w-full" type="tel" placeholder="+48 (99) 999-99-99" />
-              <button className="py-3 w-full bg-white text-black font-bold ">Оставить заявку</button>
+              <input className="font-bold text-white px-7 bg-[#00000033] py-3 w-full" type="text" placeholder={t("placeholder_name")} />
+              <input className="font-bold text-white px-7 bg-[#00000033] py-3 w-full" type="tel" placeholder={t("placeholder_phone")} />
+              <button className="py-3 w-full bg-white text-black font-bold ">{t("btn_apply")}</button>
             </form>
           </div>
         </div>
-        <h1 className="font-bold text-white text-4xl ">Мы уже работаем в таких городах:</h1>
+        <h1 className="font-bold text-white text-4xl ">{t("cities_title")}</h1>
       </div>
       <div className="w-full">
         <Image className="w-full" src={image10} alt="" />

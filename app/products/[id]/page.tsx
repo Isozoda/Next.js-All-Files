@@ -7,4 +7,3 @@ export default async function ProductById({
     const { id } = await params
     return <div>My Post: {id}</div>
 }
-

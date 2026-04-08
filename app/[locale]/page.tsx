@@ -18,7 +18,7 @@ const Page = () => {
   return (
     <div className="w-full">
       <div className="background">
-        <h1 className="text-5xl mb-7" dangerouslySetInnerHTML={{ __html: t.raw("hero_title") }}></h1>
+        <h1 className="text-5xl mb-7 w-[63%] m-auto">{t("hero_title")}</h1>
         <p className="text-xl mb-10">{t("hero_subtitle")}</p>
         <div className="flex items-center gap-5 justify-center">
           <button className="bg-white text-black px-5 py-2 font-bold">{t("btn_apply")}</button>

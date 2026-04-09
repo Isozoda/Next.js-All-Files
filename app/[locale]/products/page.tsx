@@ -1,4 +1,3 @@
-import React from 'react'
 
 const page = () => {
   return (
@@ -9,3 +8,4 @@ const page = () => {
 }
 
 export default page
+

@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
 import { notFound } from "next/navigation";
+import ChangeSelect from "@/src/components/changeSelect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   const { locale } = await params;
-  
+
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -43,6 +44,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
+        <ChangeSelect />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,54 +1,41 @@
-"use client";
+"use client"
+import { usePathname, useRouter } from '@/src/i18n/navigation';
+import { useParams } from 'next/navigation';
 
-import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
-import { ChangeEvent, useEffect, useState } from "react";
+export default function SelectLang() {
+  const { locale } = useParams()
+  const pathname = usePathname()
+  console.log(pathname);
 
-export default function LocaleSwitcher() {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
+  const router = useRouter()
 
-  useEffect(() => {
-    setMounted(true);
-    const savedLocale = localStorage.getItem("app_locale");
-    if (savedLocale && savedLocale !== locale && ['en', 'ru', 'tj'].includes(savedLocale)) {
-      const parts = pathname.split('/');
-      if (['en', 'ru', 'tj'].includes(parts[1])) {
-        parts[1] = savedLocale;
-      } else {
-        parts.splice(1, 0, savedLocale);
-      }
-      router.push(parts.join('/') || '/');
-    }
-  }, [locale, pathname, router]);
-
-  const handleLocaleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
-    localStorage.setItem("app_locale", newLocale);
-
-    const parts = pathname.split('/');
-    if (['en', 'ru', 'tj'].includes(parts[1])) {
-      parts[1] = newLocale;
-    } else {
-      parts.splice(1, 0, newLocale);
-    }
-    const newPath = parts.join('/') || '/';
-    router.push(newPath);
-  };
-
-  if (!mounted) return null; // Avoid hydration mismatch
-
-  return (
+  const handelLangChange = (event: any) => {
+    router.push(
+      pathname,
+      { locale: event.target.value }
+    )
+  }
+  return <div>
     <select
       value={locale}
-      onChange={handleLocaleChange}
-      className="bg-transparent text-white font-bold cursor-pointer outline-none ml-4"
+      onChange={handelLangChange}
+      className="
+        bg-white/20
+        backdrop-blur-lg
+        border border-white/30
+        text-white
+        rounded-2xl
+        px-5 py-2
+        shadow-lg
+        outline-none
+        hover:bg-white/30
+        transition
+        cursor-pointer
+    "
     >
-      <option value="en" className="text-black">EN</option>
-      <option value="ru" className="text-black">RU</option>
-      <option value="tj" className="text-black">TJ</option>
+      <option value="en" className="text-black">English</option>
+      <option value="ru" className="text-black">Русский</option>
+      <option value="tj" className="text-black">Тоҷикӣ</option>
     </select>
-  );
+  </div>
 }

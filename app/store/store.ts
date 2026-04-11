@@ -3,8 +3,7 @@ import { TodoApi } from '../api/todo'
 
 export const store = configureStore({
   reducer: {
-        [TodoApi.reducerPath]: TodoApi.reducer,
-
+    [TodoApi.reducerPath]: TodoApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(TodoApi.middleware),

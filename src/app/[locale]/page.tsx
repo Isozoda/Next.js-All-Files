@@ -8,8 +8,9 @@ import image7 from "../images/Ellipse 314.png"
 import image8 from "../images/image 280.png"
 import image9 from "../images/image 279.png"
 import image10 from "../images/image 251.png"
-import image11 from "../images/Group 79.png"
+
 import "../globals.css";
+
 import { useTranslations } from 'next-intl';
 
 const Page = () => {

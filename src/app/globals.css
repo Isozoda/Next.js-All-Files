@@ -1,117 +1,44 @@
 @import "tailwindcss";
 
-header {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0px;
-  padding: 6px 50px;
-  background-color: #00000033;
-  color: white;
-  font-size: large;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --accent: 158 94% 65%;
+  }
+
+  body {
+    background-color: white;
+    color: #0f172a;
+  }
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.backImage  {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url("./images/4.png");
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.background {
-  background-image: url("./images/image.png");
-  height: 700px;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 200px 0;
-  text-align: center;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.background2 {
-  background-image: url("./images/image\ 263.png");
-  height: 730px;
-  color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-.background h1 {
-  font-size: 50px;
-  font-weight: 500;
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
 }
 
-.background3 {
-  background-image: url("./images/image\ 263\ \(1\).png");
-  height: 750px;
-  color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-}
-
-.background4 {
-  background-image: url("./images/image\ 262.png");
-  height: 600px;
-  color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-}
-
-.background5 {
-  background-image: url("./images/Group\ 67.png");
-  height: 400px;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-}
-
-.backgroundDelivery1 {
-  background-image: url("./images/image\ copy.png");
-  height: 700px;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 200px 0;
-  text-align: center;
-}
-
-.backgroundDelivery2 {
-  background-image: url("./images/image\ 262\ \(1\).png");
-  height: 600px;
-  color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.backgroundFaq1 {
-  background-image: url("./images/image\ copy\ 2.png");
-  height: 700px;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 200px 0;
-  text-align: center;
-}
-
-.backGroundFAQ {
-  background-image: url("./images/Group\ 79\ \(1\).png");
-  height: 350px;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

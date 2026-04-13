@@ -1,0 +1,149 @@
+{
+  "Layout": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "getStarted": "GET STARTED",
+    "description": "A DESIGN BOUTIQUE SPECIALIZING IN STRUCTURAL DIGITAL AESTHETICS FOR PREMIUM BRANDS AND INSTITUTIONS WORLDWIDE.",
+    "explore": {
+      "title": "Explore",
+      "sitemap": "SITEMAP",
+      "newsletter": "NEWSLETTER",
+      "insights": "INSIGHTS",
+      "pressKit": "PRESS KIT"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "PRIVACY POLICY",
+      "terms": "TERMS OF SERVICE",
+      "cookie": "COOKIE POLICY"
+    },
+    "copyright": "© 2024 ARCHITECTURAL EDITORIAL. ALL RIGHTS RESERVED."
+  },
+  "HomePage": {
+    "established": "ESTABLISHED 2024",
+    "hero": {
+      "title": "Precision in \n Digital Form.",
+      "description": "We merge architectural rigor with editorial elegance to build interfaces that command attention and define industry standards.",
+      "viewPortfolio": "VIEW PORTFOLIO",
+      "ourProcess": "OUR PROCESS",
+      "featuredWork": "Featured Work",
+      "featuredTitle": "The Nexus Building"
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "description": "Defining the standard of excellence through meticulously crafted design frameworks and strategic brand architecture.",
+      "spatial": {
+        "title": "Spatial Design Systems",
+        "description": "We treat every pixel as a structural element, ensuring balance, rhythm, and structural integrity across all digital platforms.",
+        "link": "EXPLORE SYSTEM →"
+      },
+      "editorial": {
+        "title": "Editorial Content",
+        "description": "High-impact typography and curated layouts that transform standard copy into a compelling narrative experience."
+      },
+      "engineering": {
+        "title": "Precision Engineering",
+        "description": "Our code is as clean as our designs. We deliver high-performance, accessible, and scalable front-end solutions."
+      }
+    },
+    "testimonials": {
+      "title": "Trusted by the visionaries of modern industry.",
+      "quote1": {
+        "text": "\"The level of detail is unprecedented. They didn't just design a website; they built a digital monument for our brand.\"",
+        "author": "Marcus Chen",
+        "role": "Director, Studio V"
+      },
+      "quote2": {
+        "text": "\"Architectural Editorial brought a sense of calm and precision to our complex technical product that we didn't think possible.\"",
+        "author": "Elena Rodriguez",
+        "role": "Founder, Flux Dynamics"
+      }
+    },
+    "cta": {
+      "title": "Ready to Start?",
+      "description": "Let's collaborate on your next digital architectural achievement. We are currently accepting select commissions.",
+      "button": "INQUIRE NOW"
+    },
+    "innovation": "Innovation"
+  },
+  "AboutPage": {
+    "established": "ESTABLISHED 2024",
+    "title": "Crafting the narrative of space.",
+    "description": "Architectural Editorial began with a singular vision: to bridge the gap between structural engineering and human emotion. We don't just document buildings; we curate stories of inhabitancy and innovation.",
+    "manifesto": "READ OUR MANIFESTO",
+    "philosophy": {
+      "title": "Foundations of Excellence",
+      "description": "Our philosophy is built on three core pillars that guide every editorial decision and creative collaboration.",
+      "precision": {
+        "title": "Precision First",
+        "description": "We respect the blueprint. Every detail of a structure is captured with technical accuracy and artistic reverence."
+      },
+      "soul": {
+        "title": "Inhabited Soul",
+        "description": "Architecture is for people. We focus on the lived experience, finding the warmth in the concrete and the light in the shadows."
+      },
+      "legacy": {
+        "title": "Legacy Narratives",
+        "description": "We don't follow trends; we define them. Our work is designed to stand the test of time, just like the buildings we feature."
+      }
+    },
+    "team": {
+      "title": "The Visionaries",
+      "description": "A multidisciplinary team of architects, editors, and visual artists dedicated to elevating design discourse.",
+      "marcus": {
+        "name": "Marcus Thorne",
+        "role": "FOUNDER & CHIEF CURATOR"
+      },
+      "elena": {
+        "name": "Elena Vance",
+        "role": "DESIGN DIRECTOR"
+      },
+      "julian": {
+        "name": "Julian Chen",
+        "role": "LEAD PHOTOGRAPHER"
+      },
+      "sarah": {
+        "name": "Sarah Jenkins",
+        "role": "EDITORIAL STRATEGY"
+      }
+    },
+    "studio": {
+      "title": "Inside the Studio",
+      "description": "Where ideas take shape and precision is the only standard."
+    },
+    "bottomCta": {
+      "title": "We believe great architectur deserves a great story.",
+      "description": "Whether you're a firm looking to document your legacy or a brand seeking architectural authority, we're ready to start the conversation.",
+      "partner": "PARTNER WITH US",
+      "portfolio": "VIEW PORTFOLIO"
+    }
+  },
+  "ContactPage": {
+    "form": {
+      "title": "Send a Message",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "inquiry": "Editorial Inquiry",
+      "support": "Support",
+      "business": "Business",
+      "message": "How can we help you?",
+      "submit": "SEND MESSAGE"
+    },
+    "info": {
+      "title": "Our Studio",
+      "description": "Visit us at our central design lab or reach out through our digital channels. We respond to all inquiries within 24 business hours.",
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "address": "STUDIO ADDRESS",
+      "addressValue": "450 Architecture Lane,\nLevel 12, Design District\nNew York, NY 10014",
+      "social": "SOCIAL ECOSYSTEM"
+    },
+    "bottomCta": {
+      "title": "Start Your Design Journey",
+      "consultation": "BOOK A CONSULTATION",
+      "portfolio": "DOWNLOAD PORTFOLIO"
+    }
+  }
+}
